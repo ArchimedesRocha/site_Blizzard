@@ -1,0 +1,21 @@
+{
+  "name": "Course-Gulp",
+  "version": "1.0.0",
+  "description": "Curso de Gulp com projeto prático",
+  "main": "index.js",
+  "repository": "git@github.com:ArchimedesRocha/Course_Codeboost_Module_Gulp.git",
+  "author": "Archimedes Rocha",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.49.7"
+  }
+}
