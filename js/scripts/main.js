@@ -15,3 +15,32 @@ var slide_hero = new Swiper(".slide-principal", {
     disableOnInteraction: false,
   },
 });
+
+// Função para Add e Retirar a classe dos links
+const allFilters = document.querySelectorAll(".js-nav-games li a");
+
+//Agora vamos ter que percorrer o array de links para podermos integrar a função de clicar no link automaticamente mudar a tab.
+const tabPane = document.querySelectorAll(".tab-pane-games");
+
+allFilters.forEach((filter, index) => {
+  filter.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    //Remove active de todos js-nav-games li a
+    allFilters.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    //Remove active de todos tab-pane-games
+    tabPane.forEach((tab) => {
+      tab.classList.remove("active");
+    });
+
+    //Percorre o array capturando o index de cada tab
+    //Adiciona active em tab-pane-games apenas no clicado
+    tabPane[index].classList.add("active");
+
+    //Adiciona active em js-nav-games li a apenas no clicado
+    filter.classList.add("active");
+  });
+});

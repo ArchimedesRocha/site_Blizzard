@@ -1,0 +1,124 @@
+.s-games {
+  padding-top: 8.3rem;
+  padding-bottom: 11rem;
+  .top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 7.8rem;
+    .left-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 40rem;
+      span {
+        display: block;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        color: $neutral-710;
+        text-transform: uppercase;
+        margin-top: 1.1rem;
+      }
+      h2 {
+        width: 100%;
+        max-width: 15.5rem;
+        font-weight: bold;
+        font-size: 3.2rem;
+        line-height: 110.2%;
+        color: $white;
+      }
+    }
+    .right-top {
+      width: 100%;
+      max-width: 58.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          &:not(:first-child) {
+            margin-left: 2.4rem;
+          }
+          a {
+            opacity: 0.5;
+            transition: all 0.3s;
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .btn-all-games {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        text-align: center;
+        color: $primary-default;
+        img {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  .tab-games-content {
+    .tab-pane-games {
+      display: none;
+      &.active {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 4.7rem 3.2rem;
+        animation: fadeUp 0.4s forwards;
+      }
+      .card-all-games {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 28rem;
+        height: 38.4rem;
+        border: 1px solid $neutral-410;
+        border-radius: 0.4rem;
+        img {
+          transition: all 0.3s;
+        }
+        &:hover {
+          img {
+            &:not(:last-child) {
+              transform: scale(1.1);
+            }
+          }
+        }
+        span {
+          display: flex;
+          align-items: center;
+          margin-top: 3.4rem;
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          color: $white;
+          img {
+            margin-right: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
