@@ -1,0 +1,109 @@
+.s-download {
+  width: 100%;
+  height: 85rem;
+  background: url("../img/backgrounds/background-section-download.png")
+    no-repeat center center;
+  overflow: hidden;
+  background-size: cover;
+  .container {
+    position: relative;
+    .text-left {
+      width: 100%;
+      max-width: 29.9rem;
+      padding-top: 13.2rem;
+      .logo {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 3.2rem;
+        line-height: 110.2%;
+        color: $white;
+        margin-bottom: 3rem;
+      }
+      ul {
+        margin-bottom: 4.2rem;
+        li {
+          display: flex;
+          align-items: center;
+          &:not(:last-child) {
+            margin-bottom: 2.4rem;
+          }
+          .icon {
+            width: 1.8rem;
+            height: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.6rem;
+          }
+          p {
+            font-size: 1.8rem;
+            line-height: 178.2%;
+            color: $neutral-720;
+          }
+        }
+      }
+      .btn.btn-primary {
+        padding: 0 3.1341rem;
+        margin-bottom: 4.9rem;
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 2.4rem;
+            height: 2.4rem;
+          }
+        }
+        span {
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 5.2rem;
+          text-align: center;
+          color: $white;
+        }
+      }
+      .app {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        p {
+          font-weight: 600;
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+          color: $neutral-800;
+          max-width: 19rem;
+          margin-left: 1.8rem;
+          a {
+            text-decoration: underline;
+            transition: color 0.3s;
+            &:hover {
+              color: $primary-light;
+            }
+          }
+        }
+      }
+    }
+    .image {
+      position: absolute;
+      top: 9.9rem;
+      right: -28rem;
+      width: 100%;
+      max-width: 106.6rem;
+      height: 61rem;
+      .img-lg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation: float 8s ease-in-out infinite;
+      }
+      .img-sm {
+        position: absolute;
+        right: 20rem;
+        bottom: -2.8rem;
+        animation: float 6s ease-in-out infinite;
+      }
+    }
+  }
+}
