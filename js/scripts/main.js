@@ -1,3 +1,6 @@
+//--------------------------------------------------------------------------------------
+//SLIDES
+//--------------------------------------------------------------------------------------
 var slide_thumbnail = new Swiper(".slide-thumbnail", {
   slidesPerView: 5,
   direction: "vertical",
@@ -16,6 +19,9 @@ var slide_hero = new Swiper(".slide-principal", {
   },
 });
 
+//--------------------------------------------------------------------------------------
+//NAVEGAÇÃO POR TABS
+//--------------------------------------------------------------------------------------
 // Função para Add e Retirar a classe dos links
 const allFilters = document.querySelectorAll(".js-nav-games li a");
 
@@ -43,4 +49,20 @@ allFilters.forEach((filter, index) => {
     //Adiciona active em js-nav-games li a apenas no clicado
     filter.classList.add("active");
   });
+});
+
+//--------------------------------------------------------------------------------------
+//MODAL LOGIN
+//--------------------------------------------------------------------------------------
+const btnOpenModal = document.querySelector(".js-open-modal");
+const btnClosedModal = document.querySelector(".js-closed-modal");
+
+btnOpenModal.addEventListener("click", (event) => {
+  event.preventDefault();
+  let tagHtml = document.documentElement;
+  tagHtml.classList.add("show-modal");
+});
+btnClosedModal.addEventListener("click", () => {
+  let tagHtml = document.documentElement;
+  tagHtml.classList.remove("show-modal");
 });

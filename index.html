@@ -62,7 +62,7 @@
         </div>
         <div class="right-container">
           <a href="" class="btn btn-outline">Criar conta</a>
-          <a href="" class="btn btn-primary">
+          <a href="" class="btn btn-primary js-open-modal">
             <img src="./img/icons/icon-login.png" alt="" />
             Logar</a
           >
@@ -232,7 +232,9 @@
           <div class="right-top">
             <ul class="js-nav-games">
               <li>
-                <a href=""><img src="./img/icons/ico-nav-1.png" alt="" /></a>
+                <a href="" class="active"
+                  ><img src="./img/icons/ico-nav-1.png" alt=""
+                /></a>
               </li>
               <li>
                 <a href=""><img src="./img/icons/ico-nav-2.png" alt="" /></a>
@@ -857,6 +859,66 @@
         </div>
       </div>
     </section>
+    <div class="s-modal">
+      <div class="overlay">
+        <div class="box">
+          <img
+            class="closed js-closed-modal"
+            src="./img/icons/ico-fechar-modal.svg"
+            alt="Icon X"
+          />
+          <img
+            class="logo"
+            src="./img/logos/logo-battlenet.png"
+            alt="Logo Battlenet"
+          />
+          <form action="">
+            <div class="form-group">
+              <input type="text" placeholder="E-mail ou telefone" />
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Senha" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary">Conectar-se</button>
+            </div>
+          </form>
+          <div class="others-connect">
+            <p>ou conecte-se com</p>
+            <ul>
+              <li>
+                <button>
+                  <img
+                    src="./img/icons/ico-gmail-black.svg"
+                    alt="Icone Gmail Black"
+                  />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img
+                    src="./img/icons/icon-apple-black.svg"
+                    alt="Icone Apple Black"
+                  />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img
+                    src="./img/icons/ico-facebook.black.svg"
+                    alt="Icone Facebook Black"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="message-user">
+            <p><a href="">Crie uma conta</a> Battle.net de graça</p>
+            <a href="">Não consegue logar?</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./js/plugins.js"></script>
     <script src="./js/all.js"></script>
   </body>
