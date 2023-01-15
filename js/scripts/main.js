@@ -46,7 +46,7 @@ allFilters.forEach((filter, index) => {
     //Adiciona active em tab-pane-games apenas no clicado
     tabPane[index].classList.add("active");
 
-    //Adiciona active em js-nav-games li a apenas no clicado
+    //Adiciona active em js-nav-games > li > a, apenas no clicado
     filter.classList.add("active");
   });
 });
@@ -66,3 +66,32 @@ btnClosedModal.addEventListener("click", () => {
   let tagHtml = document.documentElement;
   tagHtml.classList.remove("show-modal");
 });
+
+//--------------------------------------------------------------------------------------
+//NAVEGAÇÃO POR TABS COMPLETO - MENU
+//--------------------------------------------------------------------------------------
+const btnMenu = document.querySelectorAll('.js-btn-menu');
+const menuHeader = document.querySelectorAll('.js-menu');
+
+btnMenu.forEach((btn, index) => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    menuHeader.forEach(itemMenu => {
+      itemMenu.classList.remove('active');
+      itemMenu.addEventListener('mouseleave', () => {        
+        itemMenu.classList.remove('active');
+        btnMenu.forEach(itemBtn => {
+          itemBtn.classList.remove('active')
+        })
+      })
+    })
+
+    btnMenu.forEach(itemBtn => {
+      itemBtn.classList.remove('active')
+    })
+    
+    btn.classList.add('active');
+    menuHeader[index].classList.add("active");
+  })
+})
