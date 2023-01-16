@@ -27,3 +27,32 @@
     }
   }
 }
+
+
+.icon-rocket {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 5000;
+  width: 5rem;
+  height: 5rem;
+  background: #00aeff;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: all .3s;
+  .one {
+    display: block;
+  }
+  .two {
+    display: none;
+  }
+  &:hover {
+    background: #fff;
+    .one {
+      display: none;
+    }
+    .two {
+      display: block;
+    }
+  }
+}

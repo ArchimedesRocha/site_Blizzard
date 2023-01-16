@@ -9,3 +9,49 @@
     transform: translateY(0px);
   }
 }
+@keyframes float-icon {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.2);
+  }
+  10% {
+    transform: scale(1.18);
+  }
+  20% {
+    transform: scale(1.16);
+  }
+  30% {
+    transform: scale(1.14);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1.08);
+  }
+  70% {
+    transform: scale(1.06);
+  }
+  80% {
+    transform: scale(1.04);
+  }
+  90% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
