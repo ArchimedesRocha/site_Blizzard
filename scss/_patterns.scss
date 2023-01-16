@@ -56,3 +56,9 @@
     }
   }
 }
+
+@media(max-width:900px) {
+  .icon-rocket {
+    display: none;
+  }
+}
