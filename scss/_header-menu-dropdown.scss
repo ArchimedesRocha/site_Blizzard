@@ -32,6 +32,7 @@
 
             width: 17.6rem;
             height: 17.6rem;
+            transition: all .2s;
             .icon {
               display: flex;
               align-items: center;
@@ -54,6 +55,9 @@
               line-height: 120%;
               text-align: center;
               color: #9D9D9D;
+            }
+            &:hover {
+                transform: scale(1.1);
             }
           }
         }
