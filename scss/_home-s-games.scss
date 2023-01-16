@@ -75,6 +75,42 @@
         grid-gap: 4.7rem 3.2rem;
         animation: fadeUp 0.4s forwards;
       }
+      .game-card {
+        display: block;
+        width: 100%;
+        max-width: 28rem;
+        &:hover {
+          .image {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+        .image {
+          overflow: hidden;
+          width: 100%;
+          height: auto;
+          border-radius: 1rem 1rem 1.5rem 1.5rem;
+          margin-bottom: 2.4rem;
+          img {
+            transition: all 0.3s ease-in;
+          }
+        }
+        .info {
+          h3 {
+            font-weight: 600;
+            font-size: 1.935rem;
+            line-height: 2.9rem;
+            color: $neutral-800;
+            margin-bottom: 0.4rem;
+          }
+          span {
+            font-size: 15.05px;
+            line-height: 23px;
+            color: rgba(229, 229, 229, 0.8);
+          }
+        }
+      }    
       .card-all-games {
         display: flex;
         flex-direction: column;
@@ -111,7 +147,6 @@
     }
   }
 }
-
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -122,3 +157,93 @@
     transform: translateY(0);
   }
 }
+@media(max-width:1000px) {
+  .s-games {
+    .top {
+      .left-top {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media(max-width:900px) {
+  .s-games {
+    .tab-games-content {
+      .tab-pane-games {
+        .card-all-games {
+          height: auto;
+        }
+        &.active {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
+@media(max-width:800px) {
+  .s-games {
+    position: relative;
+    z-index: 5;
+    background: black;
+  }
+}
+@media(max-width:700px) {
+  .s-games { 
+    .top {
+      .right-top {
+        justify-content: flex-end;
+        .js-nav-games {
+          display: none;
+        }
+      }
+    }   
+    .tab-games-content {
+      .tab-pane-games {
+        &.active {
+          grid-template-columns: repeat(3, 1fr);
+          justify-items: center;
+        }
+      }
+    }
+  }
+}
+@media(max-width:600px) {
+  .s-games { 
+    margin-top: 3rem;
+    .tab-games-content {
+      .tab-pane-games {
+        &.active {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+@media(max-width:480px) {
+  .s-games { 
+    .top {
+      flex-direction: column;
+      gap: 2rem;
+      .left-top, .right-top {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .tab-games-content {
+      .tab-pane-games {
+        .card-all-games {
+          height: 38rem;
+        }
+        &.active {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+  }
+}
+

@@ -1,8 +1,6 @@
 .header-menu-dropdown {
-
   width: 100%;
   padding-top: 9.6rem;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -17,6 +15,7 @@
   pointer-events: none;
   transition: all .3s;
   .main-menu {      
+    position: relative;
     padding-top: 3.8rem;
     padding-bottom: 5.5rem; 
     .container {
@@ -58,6 +57,16 @@
             }
           }
         }
+      }
+    }    
+    .js-close-sports-menu {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      transition: all .1s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }
@@ -119,6 +128,121 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 1000px) {
+  .header-menu-dropdown {
+    .main-menu {
+      .container {
+        ul {    
+          grid-template-columns: repeat(4, 1fr);
+          li {
+            a {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .header-menu-dropdown.esportes {
+    .main-menu {
+      .container {
+        ul {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+  }
+}
+@media(max-width: 900px) {
+  .header-menu-dropdown {
+    padding: 0;
+  }
+  .header-menu-dropdown.esportes {
+    padding: 0;
+    height: 100vh;
+    .main-menu {
+      .container {
+        ul {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
+@media(max-width: 800px) {
+  .header-menu-dropdown {
+    .footer-menu {
+      height: auto;
+      padding: 3rem 0;
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 3rem;
+        width: 100%;
+        li {
+          width: 20rem;
+        }
+      }
+    }
+  }
+  .header-menu-dropdown.esportes {
+    .main-menu {
+      padding: 0;
+      .container {
+        margin: 0;
+        padding-bottom: 2rem;
+        ul {
+          gap: 0;
+          li {
+            a {
+              .icon {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-menu {
+      background: #15171B;
+    }
+  }
+}
+@media(max-width: 480px) {
+  .header-menu-dropdown {
+    padding: 0;
+    .main-menu {
+      .container {
+        ul {
+          grid-template-columns: repeat(2, 1fr);
+          li {
+            a {
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    .footer-menu {
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+      }
+    }
+  }
+  .header-menu-dropdown.esportes {
+    .main-menu {
+      .container {
+        background: black;
+        ul {        
+          grid-template-columns: repeat(2, 1fr);
         }
       }
     }

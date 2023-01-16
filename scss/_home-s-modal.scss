@@ -138,12 +138,23 @@
     }
   }
 }
-.show-modal {
+.show-modal, .show-modal-login-mobile {
   .s-modal {
     opacity: 1;
     pointer-events: all;
     .box {
+      height: 60rem;
       transform: translateY(0rem);
+    }
+  }
+}
+@media(max-width:600px) {
+  .s-modal {
+    .overlay {
+      .box {
+        height: 100%;
+        padding: 1rem;
+      }
     }
   }
 }
