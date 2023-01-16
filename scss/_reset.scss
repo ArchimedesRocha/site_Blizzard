@@ -24,3 +24,10 @@ button {
 body {
   background-color: $neutral-100;
 }
+
+//Customização Global de Sections
+.show-modal-mobile-menu {
+  .s-hero, .s-games, .s-download {
+    display: none;
+  }
+}
